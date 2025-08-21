@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { Monitor, Smartphone, Users, Code, Wrench, Shield } from 'lucide-react'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -40,15 +41,15 @@ export default function Home() {
       {/* Hero Section */}
       <section className="px-4 py-12 lg:px-8 lg:py-20">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
             {/* Left Content */}
             <motion.div 
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="space-y-8"
+              className="space-y-8 lg:pr-8"
             >
-              <h1 className="text-5xl lg:text-7xl font-black leading-none tracking-tight">
+              <h1 className="text-4xl lg:text-6xl xl:text-7xl font-black leading-none tracking-tight">
                 <span className="text-gray-900">WE MAKE </span>
                 <span className="text-[#5c3c91]">IT</span>
                 <br />
@@ -59,7 +60,7 @@ export default function Home() {
                 <span className="text-[#5c3c91]">AFFORDABLE.</span>
               </h1>
               
-              <div className="text-base lg:text-lg text-gray-700 space-y-1 leading-relaxed">
+              <div className="text-sm lg:text-base xl:text-lg text-gray-700 space-y-1 leading-relaxed max-w-lg">
                 <p>
                   <span className="text-gray-900">Hong Kong's First One-Stop </span>
                   <span className="text-[#5c3c91] font-semibold">Website Design</span>,
@@ -72,92 +73,36 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Right Illustration */}
+            {/* Right Hero Image */}
             <motion.div 
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="relative"
+              className="relative lg:mt-8"
             >
-              <div className="relative w-full max-w-xl mx-auto">
-                {/* Floating Elements - Top */}
+              <div className="relative w-full max-w-lg mx-auto lg:mx-0">
+                <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+                  <Image
+                    src="/images/heroes section.png"
+                    alt="Hero Section - IT Solutions"
+                    width={600}
+                    height={400}
+                    className="w-full h-auto object-cover"
+                    priority
+                  />
+                </div>
+                
+                {/* Floating accent elements */}
                 <motion.div 
                   animate={{ y: [0, -15, 0] }}
                   transition={{ duration: 4, repeat: Infinity }}
-                  className="absolute -top-8 right-12 w-20 h-6 bg-yellow-400 rounded-full transform rotate-12"
+                  className="absolute -top-4 -right-4 w-12 h-12 bg-yellow-400 rounded-full opacity-80"
                 ></motion.div>
                 
                 <motion.div 
                   animate={{ y: [0, 12, 0] }}
                   transition={{ duration: 3, repeat: Infinity }}
-                  className="absolute top-8 -left-4 w-16 h-16 bg-orange-500 rounded-lg transform rotate-45"
-                ></motion.div>
-                
-                <motion.div 
-                  animate={{ y: [0, -8, 0] }}
-                  transition={{ duration: 5, repeat: Infinity }}
-                  className="absolute -top-4 right-20 w-0 h-0 border-l-12 border-r-12 border-b-20 border-l-transparent border-r-transparent border-b-pink-500 transform rotate-12"
-                ></motion.div>
-
-                {/* Main Workspace Scene */}
-                <div className="relative z-10 p-12">
-                  {/* Desk Base */}
-                  <div className="relative">
-                    <div className="w-80 h-40 bg-gradient-to-br from-amber-100 to-amber-200 rounded-2xl shadow-lg"></div>
-                    <div className="absolute top-0 left-0 w-full h-12 bg-gradient-to-r from-blue-800 to-blue-900 rounded-t-2xl"></div>
-                    
-                    {/* Person Character */}
-                    <div className="absolute -top-20 left-1/2 transform -translate-x-1/2 z-20">
-                      {/* Head */}
-                      <div className="w-20 h-20 bg-gradient-to-br from-amber-600 to-amber-700 rounded-full mb-1 relative">
-                        {/* Hair */}
-                        <div className="absolute -top-2 left-2 w-16 h-8 bg-gray-800 rounded-full"></div>
-                      </div>
-                      {/* Body */}
-                      <div className="w-24 h-16 bg-gradient-to-br from-[#5c3c91] to-[#6b4c9a] rounded-xl"></div>
-                    </div>
-                    
-                    {/* Laptop */}
-                    <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 z-10">
-                      <div className="w-16 h-12 bg-gray-200 rounded-lg border-2 border-gray-300 shadow-md">
-                        <div className="w-full h-8 bg-gray-800 rounded-t-md"></div>
-                      </div>
-                    </div>
-
-                    {/* Desk Items */}
-                    <div className="absolute -top-4 right-8">
-                      <div className="w-8 h-8 bg-green-500 rounded-full"></div>
-                    </div>
-                    <div className="absolute -top-2 left-8">
-                      <div className="w-6 h-12 bg-green-400 rounded-full"></div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Bottom Floating Elements */}
-                <motion.div 
-                  animate={{ rotate: [0, 360] }}
-                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  className="absolute bottom-12 -left-8 w-12 h-12 bg-green-400 rounded-full"
-                ></motion.div>
-                
-                <motion.div 
-                  animate={{ y: [0, -12, 0] }}
-                  transition={{ duration: 3.5, repeat: Infinity }}
-                  className="absolute bottom-20 right-4 w-8 h-16 bg-gradient-to-t from-green-500 to-green-300 rounded-full"
-                ></motion.div>
-                
-                <motion.div 
-                  animate={{ y: [0, 18, 0] }}
-                  transition={{ duration: 4.5, repeat: Infinity }}
-                  className="absolute bottom-8 right-20 w-16 h-8 bg-gray-300 rounded-full shadow-md"
-                ></motion.div>
-
-                {/* Additional Accent Elements */}
-                <motion.div 
-                  animate={{ rotate: [0, -360] }}
-                  transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                  className="absolute top-1/2 -right-8 w-6 h-6 bg-[#5c3c91] rounded transform rotate-45"
+                  className="absolute -bottom-4 -left-4 w-16 h-16 bg-[#5c3c91] rounded-lg transform rotate-45 opacity-80"
                 ></motion.div>
               </div>
             </motion.div>
@@ -183,15 +128,25 @@ export default function Home() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-white rounded-3xl p-8 hover:shadow-xl transition-all duration-300 border border-gray-100"
+              className="bg-white rounded-2xl p-6 hover:shadow-lg transition-all duration-300 border border-gray-100"
             >
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                <Monitor className="w-10 h-10 text-white" />
+              <div className="flex items-start space-x-4">
+                <div className="flex-1 rounded-2xl relative overflow-hidden">
+                  <Image
+                    src="/images/website development.jpg"
+                    alt="Website Development"
+                    width={300}
+                    height={200}
+                    className="w-full h-48 object-cover rounded-2xl"
+                  />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">Website Development</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    We specialize in creating high-quality websites that meet your business needs and offer 24/7 maintenance guarantees.
+                  </p>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Website Development</h3>
-              <p className="text-gray-600 text-base leading-relaxed">
-                We specialize in creating high-quality websites that meet your business needs and offer 24/7 maintenance guarantees.
-              </p>
             </motion.div>
 
             {/* Mobile Apps Development */}
@@ -199,15 +154,25 @@ export default function Home() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white rounded-3xl p-8 hover:shadow-xl transition-all duration-300 border border-gray-100"
+              className="bg-white rounded-2xl p-6 hover:shadow-lg transition-all duration-300 border border-gray-100"
             >
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                <Smartphone className="w-10 h-10 text-white" />
+              <div className="flex items-start space-x-4">
+                <div className="flex-1 rounded-2xl relative overflow-hidden">
+                  <Image
+                    src="/images/mobile apps development.jpg"
+                    alt="Mobile Apps Development"
+                    width={300}
+                    height={200}
+                    className="w-full h-48 object-cover rounded-2xl"
+                  />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">Mobile Apps Development</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    We develop high-performance mobile apps used across iOS and Android platforms.
+                  </p>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Mobile Apps Development</h3>
-              <p className="text-gray-600 text-base leading-relaxed">
-                We develop high-performance mobile apps used across iOS and Android platforms.
-              </p>
             </motion.div>
 
             {/* Custom Business Tools */}
@@ -215,15 +180,25 @@ export default function Home() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="bg-white rounded-3xl p-8 hover:shadow-xl transition-all duration-300 border border-gray-100"
+              className="bg-white rounded-2xl p-6 hover:shadow-lg transition-all duration-300 border border-gray-100"
             >
-              <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                <Wrench className="w-10 h-10 text-white" />
+              <div className="flex items-start space-x-4">
+                <div className="flex-1 rounded-2xl relative overflow-hidden">
+                  <Image
+                    src="/images/custom-business-tools.png"
+                    alt="Custom Business Tools"
+                    width={300}
+                    height={200}
+                    className="w-full h-48 object-cover rounded-2xl"
+                  />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">Custom Business Tools</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    We provide different custom business tools (CRM, ERP, etc.) to help you stay ahead in the competitive market.
+                  </p>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Custom Business Tools</h3>
-              <p className="text-gray-600 text-base leading-relaxed">
-                We provide different custom business tools (CRM, ERP, etc.) to help you stay ahead in the competitive market.
-              </p>
             </motion.div>
 
             {/* Social Media Engagement */}
@@ -231,15 +206,25 @@ export default function Home() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-white rounded-3xl p-8 hover:shadow-xl transition-all duration-300 border border-gray-100"
+              className="bg-white rounded-2xl p-6 hover:shadow-lg transition-all duration-300 border border-gray-100"
             >
-              <div className="w-20 h-20 bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                <Users className="w-10 h-10 text-white" />
+              <div className="flex items-start space-x-4">
+                <div className="flex-1 rounded-2xl relative overflow-hidden">
+                  <Image
+                    src="/images/social media.png"
+                    alt="Social Media Engagement"
+                    width={300}
+                    height={200}
+                    className="w-full h-48 object-cover rounded-2xl"
+                  />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">Social Media Engagement</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    We have different campaigns to help increase your social presence and brands by using Facebook, Instagram and LinkedIn.
+                  </p>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Social Media Engagement</h3>
-              <p className="text-gray-600 text-base leading-relaxed">
-                We have different campaigns to help increase your social presence and brands by using Facebook, Instagram and LinkedIn.
-              </p>
             </motion.div>
 
             {/* Programming Services */}
@@ -247,15 +232,25 @@ export default function Home() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="bg-white rounded-3xl p-8 hover:shadow-xl transition-all duration-300 border border-gray-100"
+              className="bg-white rounded-2xl p-6 hover:shadow-lg transition-all duration-300 border border-gray-100"
             >
-              <div className="w-20 h-20 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                <Code className="w-10 h-10 text-white" />
+              <div className="flex items-start space-x-4">
+                <div className="flex-1 rounded-2xl relative overflow-hidden">
+                  <Image
+                    src="/images/programming.jpg"
+                    alt="Programming Services"
+                    width={300}
+                    height={200}
+                    className="w-full h-48 object-cover rounded-2xl"
+                  />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">Programming Services</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    We offer expert programming services in Python and Java and we also create customized backend systems.
+                  </p>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Programming Services</h3>
-              <p className="text-gray-600 text-base leading-relaxed">
-                We offer expert programming services in Python and Java and we also create customized backend systems.
-              </p>
             </motion.div>
 
             {/* Comprehensive Maintenance & Bug Fixes */}
@@ -263,15 +258,28 @@ export default function Home() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="bg-white rounded-3xl p-8 hover:shadow-xl transition-all duration-300 border border-gray-100"
+              className="bg-white rounded-2xl p-6 hover:shadow-lg transition-all duration-300 border border-gray-100"
             >
-              <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
-                <Shield className="w-10 h-10 text-white" />
+              <div className="flex items-start space-x-4">
+                <div className="w-32 h-24 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center flex-shrink-0 relative overflow-hidden">
+                  {/* Maintenance & Bug Fixes Illustration */}
+                  <div className="relative">
+                    <div className="w-12 h-12 bg-white rounded-xl border border-orange-200"></div>
+                    <div className="absolute top-1.5 left-1.5 w-8 h-1.5 bg-orange-100 rounded-sm"></div>
+                    <div className="absolute top-4.5 left-1.5 w-6 h-1 bg-orange-200 rounded-sm"></div>
+                    <div className="absolute top-7.5 left-1.5 w-4 h-1 bg-orange-200 rounded-sm"></div>
+                    <div className="absolute -top-1.5 -right-1.5 w-6 h-6 bg-green-400 rounded-full border-2 border-white flex items-center justify-center">
+                      <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">Comprehensive Maintenance & Bug Fixes</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Our Maintenance & Bug Fixes Service ensures your software, website and applications run smoothly and reliably over time.
+                  </p>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Comprehensive Maintenance & Bug Fixes</h3>
-              <p className="text-gray-600 text-base leading-relaxed">
-                Our Maintenance & Bug Fixes Service ensures your software, website and applications run smoothly and reliably over time.
-              </p>
             </motion.div>
           </div>
         </div>
