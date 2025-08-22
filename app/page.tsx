@@ -16,7 +16,7 @@ export default function Home() {
             <div className="w-4 h-4 bg-gradient-to-br from-indigo-600 to-[#5c3c91] rounded transform rotate-12 -ml-1"></div>
             <span className="text-lg font-bold text-gray-800 ml-1">SOFTWEBIX</span>
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6 text-xs font-semibold text-gray-800 tracking-wide -mt-1">
             <a href="#" className="hover:text-[#5c3c91] transition-colors">ABOUT US</a>
@@ -28,7 +28,7 @@ export default function Home() {
             <a href="#" className="hover:text-[#5c3c91] transition-colors">SUPPORT</a>
             <a href="#" className="hover:text-[#5c3c91] transition-colors">CONTACT US</a>
           </div>
-          
+
           {/* Mobile Menu Button */}
           <button className="lg:hidden p-2">
             <div className="w-6 h-0.5 bg-gray-600 mb-1"></div>
@@ -39,15 +39,15 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="px-4 py-12 lg:px-8 lg:py-20">
+      <section className="px-4 py-12 lg:px-8 lg:py-20 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+          <div className="relative">
             {/* Left Content */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="space-y-8 lg:pr-8"
+              className="space-y-8 lg:pr-8 relative z-20 lg:w-1/2"
             >
               <h1 className="text-4xl lg:text-6xl xl:text-7xl font-black leading-none tracking-tight">
                 <span className="text-gray-900">WE MAKE </span>
@@ -59,7 +59,7 @@ export default function Home() {
                 <br />
                 <span className="text-[#5c3c91]">AFFORDABLE.</span>
               </h1>
-              
+
               <div className="text-sm lg:text-base xl:text-lg text-gray-700 space-y-1 leading-relaxed max-w-lg">
                 <p>
                   <span className="text-gray-900">Hong Kong's First One-Stop </span>
@@ -73,33 +73,102 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Right Hero Image */}
-            <motion.div 
+            {/* Overlapping Hero Image */}
+            <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="relative lg:mt-8"
+              className="absolute top-0 right-0 lg:left-1/3 lg:right-0 w-full lg:w-2/3 z-10"
             >
-              <div className="relative w-full max-w-lg mx-auto lg:mx-0">
-                <div className="relative overflow-hidden rounded-3xl shadow-2xl">
-                  <Image
-                    src="/images/heroes section.png"
-                    alt="Hero Section - IT Solutions"
-                    width={600}
-                    height={400}
-                    className="w-full h-auto object-cover"
-                    priority
-                  />
+              <div className="relative w-full max-w-4xl mx-auto lg:mx-0">
+                <div className="relative overflow-hidden rounded-3xl shadow-2xl bg-gradient-to-br from-gray-50 to-gray-100 h-[500px] flex items-center justify-center">
+                  {/* CSS-based illustration matching softwebix.jpeg */}
+                  <div className="relative w-full h-full flex items-center justify-center p-8">
+                    
+                    {/* Background geometric shapes */}
+                    <div className="absolute top-16 left-16 w-16 h-16 bg-yellow-400 rounded-full opacity-80"></div>
+                    <div className="absolute top-24 right-20 w-0 h-0 border-l-[20px] border-r-[20px] border-b-[35px] border-l-transparent border-r-transparent border-b-pink-500"></div>
+                    <div className="absolute bottom-20 left-12 w-20 h-10 bg-orange-500 rounded-full transform rotate-45"></div>
+                    <div className="absolute bottom-16 right-16 w-16 h-16 bg-green-500 rounded-full opacity-70"></div>
+                    <div className="absolute top-32 left-1/3 w-12 h-12 bg-blue-400 transform rotate-45"></div>
+                    
+                    {/* Main character and desk */}
+                    <div className="relative z-10 flex flex-col items-center">
+                      
+                      {/* Desk */}
+                      <div className="relative">
+                        {/* Desk surface */}
+                        <div className="w-64 h-32 bg-amber-200 rounded-t-lg relative">
+                          {/* Desk legs */}
+                          <div className="absolute -bottom-16 left-4 w-3 h-16 bg-amber-300"></div>
+                          <div className="absolute -bottom-16 right-4 w-3 h-16 bg-amber-300"></div>
+                        </div>
+                        
+                        {/* Laptop */}
+                        <div className="absolute top-4 left-8 w-32 h-20 bg-gray-800 rounded-lg">
+                          <div className="w-full h-12 bg-gray-700 rounded-t-lg"></div>
+                          <div className="w-full h-8 bg-gray-900 rounded-b-lg flex items-center justify-center">
+                            <div className="w-24 h-1 bg-gray-600 rounded"></div>
+                          </div>
+                        </div>
+                        
+                        {/* Coffee cup */}
+                        <div className="absolute top-6 right-8 w-6 h-8 bg-white rounded-b-full border-2 border-gray-300">
+                          <div className="absolute -right-1 top-2 w-2 h-3 border-2 border-gray-300 rounded-r-full border-l-0"></div>
+                        </div>
+                        
+                        {/* Plant */}
+                        <div className="absolute -top-8 right-16 w-4 h-12 bg-amber-600 rounded-full">
+                          <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-green-500 rounded-full"></div>
+                          <div className="absolute -top-1 left-0 w-4 h-4 bg-green-400 rounded-full"></div>
+                          <div className="absolute -top-1 right-0 w-4 h-4 bg-green-600 rounded-full"></div>
+                        </div>
+                      </div>
+                      
+                      {/* Character */}
+                      <div className="absolute -top-16 left-1/2 transform -translate-x-1/2">
+                        {/* Head */}
+                        <div className="w-16 h-16 bg-amber-700 rounded-full relative">
+                          {/* Hair */}
+                          <div className="absolute -top-2 left-2 w-12 h-8 bg-gray-800 rounded-full"></div>
+                          {/* Eyes */}
+                          <div className="absolute top-5 left-4 w-2 h-2 bg-white rounded-full"></div>
+                          <div className="absolute top-5 right-4 w-2 h-2 bg-white rounded-full"></div>
+                          {/* Smile */}
+                          <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-4 h-2 border-b-2 border-gray-800 rounded-full"></div>
+                        </div>
+                        
+                        {/* Body */}
+                        <div className="w-12 h-20 bg-[#5c3c91] rounded-lg mx-auto mt-1 relative">
+                          {/* Arms */}
+                          <div className="absolute -left-3 top-2 w-6 h-3 bg-[#5c3c91] rounded-full transform -rotate-12"></div>
+                          <div className="absolute -right-3 top-2 w-6 h-3 bg-[#5c3c91] rounded-full transform rotate-12"></div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Floating code elements */}
+                    <div className="absolute top-12 right-32 text-xs font-mono text-gray-600 bg-white p-2 rounded shadow-lg">
+                      &lt;/&gt;
+                    </div>
+                    <div className="absolute bottom-32 left-24 text-xs font-mono text-gray-600 bg-white p-2 rounded shadow-lg">
+                      { }
+                    </div>
+                    <div className="absolute top-40 left-8 text-xs font-mono text-gray-600 bg-white p-2 rounded shadow-lg">
+                      HTML
+                    </div>
+                    
+                  </div>
                 </div>
-                
+
                 {/* Floating accent elements */}
-                <motion.div 
+                <motion.div
                   animate={{ y: [0, -15, 0] }}
                   transition={{ duration: 4, repeat: Infinity }}
                   className="absolute -top-4 -right-4 w-12 h-12 bg-yellow-400 rounded-full opacity-80"
                 ></motion.div>
-                
-                <motion.div 
+
+                <motion.div
                   animate={{ y: [0, 12, 0] }}
                   transition={{ duration: 3, repeat: Infinity }}
                   className="absolute -bottom-4 -left-4 w-16 h-16 bg-[#5c3c91] rounded-lg transform rotate-45 opacity-80"
@@ -113,7 +182,7 @@ export default function Home() {
       {/* Services Section */}
       <section className="px-4 py-20 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -121,10 +190,10 @@ export default function Home() {
           >
             OUR SERVICES
           </motion.h2>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {/* Website Development */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -150,7 +219,7 @@ export default function Home() {
             </motion.div>
 
             {/* Mobile Apps Development */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -176,7 +245,7 @@ export default function Home() {
             </motion.div>
 
             {/* Custom Business Tools */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -202,7 +271,7 @@ export default function Home() {
             </motion.div>
 
             {/* Social Media Engagement */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -228,7 +297,7 @@ export default function Home() {
             </motion.div>
 
             {/* Programming Services */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
@@ -254,24 +323,19 @@ export default function Home() {
             </motion.div>
 
             {/* Comprehensive Maintenance & Bug Fixes */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               className="bg-white rounded-2xl p-6 hover:shadow-lg transition-all duration-300 border border-gray-100"
             >
               <div className="flex items-start space-x-4">
-                <div className="w-32 h-24 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center flex-shrink-0 relative overflow-hidden">
-                  {/* Maintenance & Bug Fixes Illustration */}
-                  <div className="relative">
-                    <div className="w-12 h-12 bg-white rounded-xl border border-orange-200"></div>
-                    <div className="absolute top-1.5 left-1.5 w-8 h-1.5 bg-orange-100 rounded-sm"></div>
-                    <div className="absolute top-4.5 left-1.5 w-6 h-1 bg-orange-200 rounded-sm"></div>
-                    <div className="absolute top-7.5 left-1.5 w-4 h-1 bg-orange-200 rounded-sm"></div>
-                    <div className="absolute -top-1.5 -right-1.5 w-6 h-6 bg-green-400 rounded-full border-2 border-white flex items-center justify-center">
-                      <div className="w-1.5 h-1.5 bg-white rounded-full"></div>
-                    </div>
-                  </div>
+                <div className="w-32 h-24 rounded-2xl flex-shrink-0 relative overflow-hidden">
+                  <img 
+                    src="/images/comprehensive-bug-maintenance.jpg" 
+                    alt="Comprehensive Maintenance & Bug Fixes"
+                    className="w-full h-full object-cover rounded-2xl"
+                  />
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-bold text-gray-900 mb-2">Comprehensive Maintenance & Bug Fixes</h3>
