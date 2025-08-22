@@ -11,14 +11,14 @@ export default function Home() {
       <nav className="w-full px-4 py-6 lg:px-8">
         <div className="max-w-7xl mx-auto flex items-start justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-1 mt-1">
+          <div className="flex items-center space-x-1 mt-4">
             <div className="w-6 h-6 bg-gradient-to-br from-[#5c3c91] to-pink-500 rounded transform rotate-45"></div>
             <div className="w-4 h-4 bg-gradient-to-br from-indigo-600 to-[#5c3c91] rounded transform rotate-12 -ml-1"></div>
             <span className="text-lg font-bold text-gray-800 ml-1">SOFTWEBIX</span>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6 text-xs font-semibold text-gray-800 tracking-wide -mt-1">
+          <div className="hidden lg:flex items-center space-x-6 text-xs font-semibold text-gray-800 tracking-wide">
             <a href="#" className="hover:text-[#5c3c91] transition-colors">ABOUT US</a>
             <a href="#" className="hover:text-[#5c3c91] transition-colors">WEB DESIGN</a>
             <a href="#" className="hover:text-[#5c3c91] transition-colors">SOCIAL MEDIA</a>
