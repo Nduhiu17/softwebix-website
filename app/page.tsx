@@ -47,7 +47,7 @@ export default function Home() {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="space-y-8 lg:pr-8 relative z-20 lg:w-1/2"
+              className="space-y-8 lg:pr-8 relative z-10 lg:w-1/2"
             >
               <h1 className="text-4xl lg:text-6xl xl:text-7xl font-black leading-none tracking-tight">
                 <span className="text-gray-900">WE MAKE </span>
@@ -78,17 +78,17 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.2 }}
-              className="absolute top-0 right-0 lg:left-1/3 lg:right-0 w-full lg:w-2/3 z-10"
+              className="absolute top-0 right-0 lg:left-1/3 lg:right-0 w-full lg:w-2/3 z-20"
             >
               <div className="relative w-full max-w-4xl mx-auto lg:mx-0">
-                <div className="relative overflow-hidden h-[500px] flex items-center justify-center">
+                <div className="relative overflow-visible h-[1100px] -mt-80 flex items-center justify-center">
                   {/* Updated: Actual Hero Image */}
                   <Image
                     src="/images/heroes-section.png"
                     alt="Softwebix Hero Section"
-                    width={800}
+                    width={700}
                     height={500}
-                    className="object-contain w-full h-full rounded-3xl"
+                    className="object-scale-down w-full h-full rounded-3xl"
                     priority
                   />
                 </div>
