@@ -81,84 +81,16 @@ export default function Home() {
               className="absolute top-0 right-0 lg:left-1/3 lg:right-0 w-full lg:w-2/3 z-10"
             >
               <div className="relative w-full max-w-4xl mx-auto lg:mx-0">
-                <div className="relative overflow-hidden rounded-3xl shadow-2xl bg-gradient-to-br from-gray-50 to-gray-100 h-[500px] flex items-center justify-center">
-                  {/* CSS-based illustration matching softwebix.jpeg */}
-                  <div className="relative w-full h-full flex items-center justify-center p-8">
-                    
-                    {/* Background geometric shapes */}
-                    <div className="absolute top-16 left-16 w-16 h-16 bg-yellow-400 rounded-full opacity-80"></div>
-                    <div className="absolute top-24 right-20 w-0 h-0 border-l-[20px] border-r-[20px] border-b-[35px] border-l-transparent border-r-transparent border-b-pink-500"></div>
-                    <div className="absolute bottom-20 left-12 w-20 h-10 bg-orange-500 rounded-full transform rotate-45"></div>
-                    <div className="absolute bottom-16 right-16 w-16 h-16 bg-green-500 rounded-full opacity-70"></div>
-                    <div className="absolute top-32 left-1/3 w-12 h-12 bg-blue-400 transform rotate-45"></div>
-                    
-                    {/* Main character and desk */}
-                    <div className="relative z-10 flex flex-col items-center">
-                      
-                      {/* Desk */}
-                      <div className="relative">
-                        {/* Desk surface */}
-                        <div className="w-64 h-32 bg-amber-200 rounded-t-lg relative">
-                          {/* Desk legs */}
-                          <div className="absolute -bottom-16 left-4 w-3 h-16 bg-amber-300"></div>
-                          <div className="absolute -bottom-16 right-4 w-3 h-16 bg-amber-300"></div>
-                        </div>
-                        
-                        {/* Laptop */}
-                        <div className="absolute top-4 left-8 w-32 h-20 bg-gray-800 rounded-lg">
-                          <div className="w-full h-12 bg-gray-700 rounded-t-lg"></div>
-                          <div className="w-full h-8 bg-gray-900 rounded-b-lg flex items-center justify-center">
-                            <div className="w-24 h-1 bg-gray-600 rounded"></div>
-                          </div>
-                        </div>
-                        
-                        {/* Coffee cup */}
-                        <div className="absolute top-6 right-8 w-6 h-8 bg-white rounded-b-full border-2 border-gray-300">
-                          <div className="absolute -right-1 top-2 w-2 h-3 border-2 border-gray-300 rounded-r-full border-l-0"></div>
-                        </div>
-                        
-                        {/* Plant */}
-                        <div className="absolute -top-8 right-16 w-4 h-12 bg-amber-600 rounded-full">
-                          <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-green-500 rounded-full"></div>
-                          <div className="absolute -top-1 left-0 w-4 h-4 bg-green-400 rounded-full"></div>
-                          <div className="absolute -top-1 right-0 w-4 h-4 bg-green-600 rounded-full"></div>
-                        </div>
-                      </div>
-                      
-                      {/* Character */}
-                      <div className="absolute -top-16 left-1/2 transform -translate-x-1/2">
-                        {/* Head */}
-                        <div className="w-16 h-16 bg-amber-700 rounded-full relative">
-                          {/* Hair */}
-                          <div className="absolute -top-2 left-2 w-12 h-8 bg-gray-800 rounded-full"></div>
-                          {/* Eyes */}
-                          <div className="absolute top-5 left-4 w-2 h-2 bg-white rounded-full"></div>
-                          <div className="absolute top-5 right-4 w-2 h-2 bg-white rounded-full"></div>
-                          {/* Smile */}
-                          <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-4 h-2 border-b-2 border-gray-800 rounded-full"></div>
-                        </div>
-                        
-                        {/* Body */}
-                        <div className="w-12 h-20 bg-[#5c3c91] rounded-lg mx-auto mt-1 relative">
-                          {/* Arms */}
-                          <div className="absolute -left-3 top-2 w-6 h-3 bg-[#5c3c91] rounded-full transform -rotate-12"></div>
-                          <div className="absolute -right-3 top-2 w-6 h-3 bg-[#5c3c91] rounded-full transform rotate-12"></div>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    {/* Floating code elements */}
-                    <div className="absolute top-12 right-32 text-xs font-mono text-gray-600 bg-white p-2 rounded shadow-lg">
-                      &lt;/&gt;
-                    </div>
-                    <div className="absolute bottom-32 left-24 text-xs font-mono text-gray-600 bg-white p-2 rounded shadow-lg">
-                      { }
-                    </div>
-                    <div className="absolute top-40 left-8 text-xs font-mono text-gray-600 bg-white p-2 rounded shadow-lg">
-                      HTML
-                    </div>
-                    
-                  </div>
+                <div className="relative overflow-hidden h-[500px] flex items-center justify-center">
+                  {/* Updated: Actual Hero Image */}
+                  <Image
+                    src="/images/heroes-section.png"
+                    alt="Softwebix Hero Section"
+                    width={800}
+                    height={500}
+                    className="object-contain w-full h-full rounded-3xl"
+                    priority
+                  />
                 </div>
 
                 {/* Floating accent elements */}
