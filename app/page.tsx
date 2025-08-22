@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+    <main className="min-h-screen bg-gray-100">
       {/* Navigation */}
       <nav className="w-full px-4 py-6 lg:px-8">
         <div className="max-w-7xl mx-auto flex items-start justify-between">
