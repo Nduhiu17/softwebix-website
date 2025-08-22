@@ -330,11 +330,13 @@ export default function Home() {
               className="bg-white rounded-2xl p-6 hover:shadow-lg transition-all duration-300 border border-gray-100"
             >
               <div className="flex items-start space-x-4">
-                <div className="w-32 h-24 rounded-2xl flex-shrink-0 relative overflow-hidden">
+                <div className="flex-1 rounded-2xl relative overflow-hidden">
                   <img 
                     src="/images/comprehensive-bug-maintenance.jpg" 
                     alt="Comprehensive Maintenance & Bug Fixes"
-                    className="w-full h-full object-cover rounded-2xl"
+                    width={300}
+                    height={200}
+                    className="w-full h-48 object-cover rounded-2xl"
                   />
                 </div>
                 <div className="flex-1">
