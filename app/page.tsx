@@ -92,19 +92,6 @@ export default function Home() {
                     priority
                   />
                 </div>
-
-                {/* Floating accent elements */}
-                <motion.div
-                  animate={{ y: [0, -15, 0] }}
-                  transition={{ duration: 4, repeat: Infinity }}
-                  className="absolute -top-4 -right-4 w-12 h-12 bg-yellow-400 rounded-full opacity-80"
-                ></motion.div>
-
-                <motion.div
-                  animate={{ y: [0, 12, 0] }}
-                  transition={{ duration: 3, repeat: Infinity }}
-                  className="absolute -bottom-4 -left-4 w-16 h-16 bg-[#5c3c91] rounded-lg transform rotate-45 opacity-80"
-                ></motion.div>
               </div>
             </motion.div>
           </div>
